@@ -4,8 +4,18 @@ class Player{
 		this.x = x;
 		this.y = y;
 	}
-	public void move(int dx,int dy){
-		x+=dx;
-		y+=dy;
+	public void move(String direction){
+		if (direction.equals("north")){
+			y-=1;	
+		}
+		else if (direction.equals("south")){
+			y+=1;
+		}
+		else if (direction.equals("west")){
+			x+=1;
+		}
+		else if (direction.equals("east")){
+			x-=1;
+		}
 	}
 }
